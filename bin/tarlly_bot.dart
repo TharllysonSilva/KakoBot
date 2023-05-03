@@ -3,13 +3,13 @@ import 'dart:io';
 import 'questions/time_questions.dart';
 
 void main() async {
-  String tarllyBot = 'tarllyBot:\n';
+  String jarvis = 'jarvis:\n';
   var a = true;
   String usuario = '';
 
-  print('-- Iniciando o tarllyBot, aguarde..--');
+  print('-- Iniciando a jarvis, aguarde..--');
 
-  print('KakoBOT:\n Oi :) \n Como posso ajudar?');
+  print('jarvis:\n Oi :) \n Como posso ajudar?');
   do {
     usuario = stdin.readLineSync().toString();
     print('-- Processando pergunta, aguarde..--');
@@ -18,18 +18,18 @@ void main() async {
         usuario.contains('Adeus') ||
         usuario.contains('adeus')) {
       a = false;
-      print(tarllyBot + ' Até a proxima!!');
+      print(jarvis + ' Até a proxima!!');
     } else if (TimeQuestions(usuario).isThisTime()) {
       // verificar antes, assim não fazemos toda a função sem precisar.
       TimeQuestions(usuario).timeQuestion();
     } else if (false) {
       //Basta adicionar novas perguntas aqui!
     } else {
-      print(tarllyBot +
+      print(jarvis +
           ' Não fui treinado para responder a essa pergunta \n Desculpe :( ');
-      print(tarllyBot + ' Você pode fazer outra pergunta ou dizer Adeus');
+      print(jarvis + ' Você pode fazer outra pergunta ou dizer Adeus');
     }
   } while (a);
 
-  print('--Encerrando KakoBOT--');
+  print('--Encerrando a jarvis--');
 }
