@@ -4,8 +4,10 @@ void main() {
     return 21;
   }).then((value) => print('The value is $value'));
 
+  // Habilitando a função ser assincrona
   Future<int> myFutureFunc() async {
     print('I have a function in the Future');
+    //Para poder esperar o tempo de ducação declarado
     await Future.delayed(Duration(seconds: 5));
     return 12;
   }
