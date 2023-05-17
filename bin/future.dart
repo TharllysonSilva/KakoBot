@@ -15,6 +15,7 @@ void main() {
 
   myFutureFunc()
       .then((value) => print('My function value is: $value'))
+      //Tratamento de erro
       .onError((error, stackTrace) => print('An Error Accurred'));
 
   print('Done with main');
