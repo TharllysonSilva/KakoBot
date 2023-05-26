@@ -1,6 +1,7 @@
 import 'dart:io';
 
 import 'questions/time_questions.dart';
+import 'timing/waiting_time.dart';
 
 void main() async {
   String jarvis = 'jarvis:\n';
@@ -8,7 +9,7 @@ void main() async {
   String usuario = '';
 
   print('-- Iniciando a jarvis, aguarde..--');
-
+  BotClock().clock(2);
   print('jarvis:\n Oi :) \n Como posso ajudar?');
   do {
     usuario = stdin.readLineSync().toString();
