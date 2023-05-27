@@ -9,11 +9,12 @@ void main() async {
   String usuario = '';
 
   print('-- Iniciando a jarvis, aguarde..--');
-  BotClock().clock(2);
+  await BotClock().clock(2);
   print('jarvis:\n Oi :) \n Como posso ajudar?');
   do {
     usuario = stdin.readLineSync().toString();
     print('-- Processando pergunta, aguarde..--');
+    await BotClock().clock(1);
     if (usuario.contains('xau') ||
         usuario.contains('Xau') ||
         usuario.contains('Adeus') ||
@@ -22,10 +23,12 @@ void main() async {
       print(jarvis + ' Até a proxima!!');
     } else if (TimeQuestions(usuario).isThisTime()) {
       // verificar antes, assim não fazemos toda a função sem precisar.
+      await BotClock().clock(2);
       TimeQuestions(usuario).timeQuestion();
     } else if (false) {
       //Basta adicionar novas perguntas aqui!
     } else {
+      await BotClock().clock(2);
       print(jarvis +
           ' Não fui treinado para responder a essa pergunta \n Desculpe :( ');
       print(jarvis + ' Você pode fazer outra pergunta ou dizer Adeus');
