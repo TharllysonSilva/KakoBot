@@ -11,7 +11,7 @@ void main() async {
     print('The Stream is finished');
   }
 
-  var tarllyStream = myStream(1).asBroadcastStream();
+  var tarllyStream = myStream(1, 12).asBroadcastStream();
   StreamSubscription mySubscription = tarllyStream.listen((event) {
     if (event.isEven) {
       print('This number is Even!');
