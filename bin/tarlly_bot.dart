@@ -10,9 +10,9 @@ void main() async {
 
   var myStream = BotClock().tarllyBotStream(1, 10);
   var subscriber = myStream.listen((event) {
-    print('                       Javis is activated for $event is seconds');
+    print('                       Javis está ativo a: $event segundos');
   }, onDone: () {
-    print('Javis is finishing its work, ask the last question!');
+    print('Javis esta sendo finalizado! Faça a ultima pergunta.');
     a = false;
   });
 
