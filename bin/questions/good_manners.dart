@@ -24,7 +24,7 @@ class GoodManners {
     return isThisGoodManners;
   }
 
-  goodManner() {
+  goodManners() {
     if (question.contains('Bom dia') || question.contains('bom dia')) {
       print(tarllyBot + 'Bom dia Flor do dia!');
     } else if (question.contains('Boa tarde') ||
