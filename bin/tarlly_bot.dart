@@ -8,6 +8,14 @@ void main() async {
   var a = true;
   String usuario = '';
 
+  var myStream = BotClock().tarllyBotStream(1, 10);
+  var subscriber = myStream.listen((event) {
+    print('                       Javis is activated for $event is seconds');
+  }, onDone: () {
+    print('Javis is finishing its work, ask the last question!');
+    a = false;
+  });
+
   print('-- Iniciando a jarvis, aguarde..--');
   await BotClock().clock(2);
   print('jarvis:\n Oi :) \n Como posso ajudar?');
